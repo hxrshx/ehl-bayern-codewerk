@@ -1,0 +1,5 @@
+add a line to notes.md saying "checkpoint test from cli"
+
+---
+
+entire checkpoint list
