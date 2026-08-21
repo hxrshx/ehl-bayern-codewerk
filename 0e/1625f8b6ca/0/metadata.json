@@ -1,0 +1,55 @@
+{
+  "cli_version": "0.10.2",
+  "checkpoint_id": "0e1625f8b6ca",
+  "session_id": "01a025f3-aaee-7d91-956f-8dae4d48f803",
+  "strategy": "manual-commit",
+  "created_at": "2026-08-21T20:14:05.733509Z",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "save_step_count": 1,
+  "files_touched": [
+    "notes.md"
+  ],
+  "agent": "Codex",
+  "model": "gpt-5.6-luna",
+  "turn_id": "d1e990ae6666",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 7059,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 88320,
+    "output_tokens": 583,
+    "api_call_count": 7
+  },
+  "session_metrics": {
+    "turn_count": 2
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-08-21T20:14:05.727124Z",
+    "agent_lines": 2,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 2,
+    "total_lines_changed": 2,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 2,
+      "agent_lines_removed": 0
+    }
+  ]
+}
