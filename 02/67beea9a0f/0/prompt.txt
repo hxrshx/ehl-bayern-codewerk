@@ -1,0 +1,17 @@
+so it would keep track of my teammates prompts and responses?
+
+---
+
+yes
+
+---
+
+so let me just be straight? tomorrow if my team pulls the repo and starts working and push it will all be saved and be good to go right?
+
+---
+
+git pull
+brew tap entireio/tap && brew trust entireio/tap && brew install --cask entire
+entire enable --agent claude-code
+entire login
+entire doctor          # all green
