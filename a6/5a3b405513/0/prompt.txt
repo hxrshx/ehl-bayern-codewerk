@@ -1,0 +1,9 @@
+done that?
+
+---
+
+If you want it enforced, I can add a PreToolUse hook on Edit/Write in .claude/settings.json that injects the checklist before every file change — say the word. do this make mo mistakes take your tie
+
+---
+
+commit and push
