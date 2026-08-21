@@ -1,0 +1,1 @@
+and also is it possible to add anoter rule to keep track of all the prompts and responses somewhere so whenever we pull we know what the other teammates have been doing?
