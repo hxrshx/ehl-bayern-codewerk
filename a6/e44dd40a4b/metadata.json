@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.10.2",
+  "checkpoint_id": "a6e44dd40a4b",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 4,
+  "files_touched": [
+    "pavincheck.md",
+    "test.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/a6/e44dd40a4b/0/metadata.json",
+      "transcript": "/a6/e44dd40a4b/0/full.jsonl",
+      "compact_transcript": "/a6/e44dd40a4b/0/transcript.jsonl",
+      "content_hash": "/a6/e44dd40a4b/0/content_hash.txt",
+      "prompt": "/a6/e44dd40a4b/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 22,
+    "cache_creation_tokens": 17199,
+    "cache_read_tokens": 3061953,
+    "output_tokens": 9669,
+    "api_call_count": 11
+  }
+}
