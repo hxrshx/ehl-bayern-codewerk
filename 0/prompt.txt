@@ -1,0 +1,5 @@
+Say hello and tell me what directory you're in.
+
+---
+
+Create a file called notes.md with the text "hackathon kickoff" and commit it with the message "test: verify entire tracking".
