@@ -1,0 +1,193 @@
+you remember waht we were doing before?
+
+---
+
+check the downloads folder quantco things and explain what it is in very simple manner
+
+---
+
+give me an example and explian this whole challenge
+
+---
+
+Munich | EHL
+EHL
+Leaderboard
+Matches
+Rules
+Partners
+Dashboard
+Pavin Sumathi Palanichamy
+Register Now
+Challenge Selection
+Munich
+Munich, Germany · 22-23 August 2026
+
+The league returns to Munich for the third match.
+
+Challenge Selection Deadline
+
+August 22, 2026 at 01:30 PM CET
+
+01
+hrs
+:
+56
+min
+:
+53
+sec
+You can edit your submission until the deadline.
+
+Team Check-in: 4 of 5
+
+All members must check in before your team can register for a challenge.
+
+Prethebha Muthukumaran
+Thota bhuvana Chandra
+Harsha Sathish
+Pavin Sumathi Palanichamy
+Riya Biju
+Challenges
+Cognition
+Find an Industry, Give it an Engineer
+by Cognition
+
+A build challenge. Two days, a domain of your choosing, judged on what actually runs at the end.
+
+Software improves fast because it has a loop: write, run, test, fix. That loop is why Devin can work unsupervised. Every attempt gets a verdict, and a wrong answer announces itself. Most industries have the same engineering problems and no such loop. The work goes out, and someone finds out months later whether it was right.
+
+Your job is to find an industry that does have the loop, and build the layer that puts Devin inside it. Pick a domain where the output can be expressed as code. Then build a system that triggers Devin sessions programmatically, gives them a way to check their own work, and produces real artifacts with nobody sitting in the middle.
+
+Pick a domain with no way to check the work and Devin is only guessing. Leave a human in the loop and you've built a copilot, not a layer. Wire it to one prepared example and you've built a demo.
+
+Every industry has an engineering problem. Give it an engineer.
+
+Judging Criteria
+
+What you built:
+- Autonomy: Trigger to artifact with nobody touching it in between
+- Verification: The system knows a good result from a bad one on its own
+- Artifacts: Output someone in that industry could actually use
+
+How you pitch it:
+- Clarity: If we can't follow it, we can't credit it
+- Problem: Which industry, who's stuck, and why it has a feedback loop
+- Approach: The strategy you went in with, and how it changed as you built
+- Solution: What you ended up with, and the logic behind it
+
+Prize
+
+1000€
+
+Submission Requirements
+
+Pitch Deck
+GitHub Repository
+Live Demo
+Viktor.com
+The Router: Right Model, Every Prompt
+by Viktor.com
+
+A build challenge. You get a dataset, you build a router, and you run and evaluate the whole thing locally.
+
+There is no single best model anymore. There is a fast one, a cheap one, a careful one, and a few that are worth their price only some of the time. Most systems ignore this and send everything to the same place. The decision gets made once, at setup, and then never again for millions of requests that are nothing like each other.
+
+Here you make that decision properly. Work from the dataset, learn what separates a request that needs the strongest model from one that does not, and build something that picks per request. Then measure how good it actually is, and be ready to defend both the number and the method behind it.
+
+Route everything to the biggest model and you have solved nothing. Fit the dataset too closely and it falls apart on anything new. And a router you cannot explain is one nobody would put in production.
+
+Judging Criteria
+
+What you built:
+- Accuracy: How often it picks the right model
+- Evaluation: Your own numbers, produced by a method someone else could rerun
+- Generality: Holds up on requests it was not trained on
+
+How you pitch it:
+- Clarity: If we can't follow it, we can't credit it
+- Problem: What makes routing hard, and what it costs to get wrong
+- Approach: The strategy you went in with, and how it changed as you built
+- Solution: What you ended up with, and the logic behind it
+
+Prize
+
+1000€
+
+Submission Requirements
+
+Pitch Deck
+GitHub Repository
+Live Demo
+QuantCo
+Insurance Invoice Poker
+by QuantCo
+
+A leaderboard game against the other teams. Every 15 minutes each team gets an insurance claim and has to make a bid.
+
+Insurance runs on a quiet negotiation: a tradesperson writes an invoice, an insurer decides what it's actually worth. Both sides are guessing what the other will accept.
+
+Here you play both roles at once. Each round brings a new policy, a new damage report, and a blank invoice. You set what you charge and what you're willing to pay when that same bill lands on your desk from another team.
+
+Charge too much and you get rejected. Pay too much and you've been had. Every round is a read on your opponents, and all results are public afterwards.
+
+Bill high, pay low. Best margin wins.
+
+Judging Criteria
+
+What you built:
+- Score: Where you finished. The main signal, not the only one
+- Generality: Also works on completely new policies
+- Consistency: The more rounds it plays cleanly, the better
+
+How you pitch it:
+- Clarity: If we can't follow it, we can't credit it
+- Problem: What's hard about pricing a claim from both sides
+- Approach: The strategy you went in with, and how it changed as you played
+- Solution: What you ended up with, and the logic behind it
+
+Prize
+
+1000€
+
+Submission Requirements
+
+Pitch Deck
+GitHub Repository
+Live Demo
+EHL
+Europe's first competitive hackathon league. Founded by TUM.ai.
+
+League
+Leaderboard
+Matches
+Rules
+Resources
+Partners
+Connect
+LinkedIn
+Instagram
+Contact
+© 2026 TUM.ai. All rights reserved.
+
+Powered by TUM.ai which one you suggest is good? doable
+
+---
+
+now we have chose quant co thing
+
+---
+
+can we see the scores they provide the a and b values?
+
+---
+
+creaete a new .md file and add all the details from the start in there explainint his all
+
+---
+
+i dont understand how konwing about toher teams is needed or make sense
+
+---
+
+sure
