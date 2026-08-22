@@ -1,0 +1,23 @@
+how to restart claude code and run the thing?
+
+---
+
+Pre-pull your eval Docker images and clone 2–3 mid-size OSS repos locally. This is the step that silently eats three hours tomorrow, and you want a baseline number printed to your terminal before you sleep — a baseline you can't beat is still a slide.
+ what about this?
+
+---
+
+what should i do now?
+
+---
+
+what about that docker thing?
+
+---
+
+If QuantCo is in play: pixi installed and one environment solved, plus 30 minutes on the glum French Motor tutorial and the metalearners background doc. Pre-cache the environment with pixi-pack in case venue wifi is bad.
+???
+
+---
+
+what should my teammates do
