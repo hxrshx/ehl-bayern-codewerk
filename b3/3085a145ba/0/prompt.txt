@@ -1,0 +1,19 @@
+Pulling the repo doesn't turn on our Entire checkpoint tracking, the git hooks don't come through git. So right now your work isn't being recorded (Harsha 0 checkpoints, Prethebha 1). We might need these at submission.
+
+Run once on your own laptop:
+
+git pull
+brew tap entireio/tap && brew trust entireio/tap && brew install --cask entire
+entire enable --agent claude-code
+entire login
+entire doctor
+
+Then always start Claude from inside the repo folder, not the one above it.
+
+To check it worked: after Claude edits a file and you commit, run entire checkpoint list — your own prompt should show up. If it doesn't, ping me.
+
+After that it's automatic, normal push sends everything. Details in the README.
+
+---
+
+Add something and commit and push the changes to github, to check if entire is working or not in colleague system
