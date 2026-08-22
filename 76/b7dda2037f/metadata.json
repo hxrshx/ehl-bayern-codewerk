@@ -1,0 +1,27 @@
+{
+  "cli_version": "0.10.2",
+  "checkpoint_id": "76b7dda2037f",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "CHALLENGE.md",
+    "GAME_DESCRIPTION.md"
+  ],
+  "sessions": [
+    {
+      "metadata": "/76/b7dda2037f/0/metadata.json",
+      "transcript": "/76/b7dda2037f/0/full.jsonl",
+      "compact_transcript": "/76/b7dda2037f/0/transcript.jsonl",
+      "content_hash": "/76/b7dda2037f/0/content_hash.txt",
+      "prompt": "/76/b7dda2037f/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 4,
+    "cache_creation_tokens": 83055,
+    "cache_read_tokens": 135211,
+    "output_tokens": 1779,
+    "api_call_count": 2
+  }
+}
