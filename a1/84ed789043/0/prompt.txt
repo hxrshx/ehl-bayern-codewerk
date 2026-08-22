@@ -1,0 +1,47 @@
+tell me step 1, devin. what should i do, tell me in detail please
+
+---
+
+check it now
+
+---
+
+2. OpenAI — get off Free tier tonight. The tier table is brutal: Tier 2 needs $50 spend plus ~7 days elapsed. The event is tomorrow, so Tier 2 is unreachable — you cannot spend your way out of it during the hackathon. But Tier 1 needs only a first successful payment and applies immediately. A $5–10 card payment tonight moves you Free → Tier 1 (gpt-4o ≈ 500 RPM / 30k TPM). Your notes also warn promo credits generally don't count as paid spend. Architect for Tier-1 limits either way — 30k TPM is ~2–3 concurrent long-context calls, so a fan-out agent loop will 429 instantly.
+ what should i do fpr this??
+
+---
+
+is it required? thatharsha's call? api key is copied
+
+---
+
+CLUSTERS: - means no mirror exists — that's the real reason entire recap and entire activity came back empty. Your prep warns this is "the one step that can eat 20 minutes at hour zero." Status owner-only suggests Harsha may need to do it, since he owns the repo. Worth him trying entire repo mirror create github.com/hxrshx/ehl-bayern-codewerk tonight rather than at 09:00.
+
+A correction, pushed as 3d2c981: I'd written "this repo is public" into both CLAUDE.md and CHECKLIST.md. It's private — gh repo view returns isPrivate: true. The shadow-branch rule stands regardless, since EHL auto-forks submissions, but the framing was wrong and is now fixed with the verification method recorded.
+
+---
+
+anythghin from this 
+CLUSTERS: - means no mirror exists — that's the real reason entire recap and entire activity came back empty. Your prep warns this is "the one step that can eat 20 minutes at hour zero." Status owner-only suggests Harsha may need to do it, since he owns the repo. Worth him trying entire repo mirror create github.com/hxrshx/ehl-bayern-codewerk tonight rather than at 09:00.
+
+A correction, pushed as 3d2c981: I'd written "this repo is public" into both CLAUDE.md and CHECKLIST.md. It's private — gh repo view returns isPrivate: true. The shadow-branch rule stands regardless, since EHL auto-forks submissions, but the framing was wrong and is now fixed with the verification method recorded.
+
+---
+
+okay good night
+
+---
+
+good morning
+
+---
+
+anything else i should do now?
+
+---
+
+where did you do the inclusion of rules and guidelines we should follow
+
+---
+
+make some changes and push to check checkpoint list
