@@ -1,0 +1,26 @@
+{
+  "_comment": "Editable keyword lists for quality_heuristics.py. Lowercase, substring match.",
+
+  "hedging_phrases": [
+    "i'm not sure", "i am not sure", "i don't have enough information",
+    "i do not have enough information", "cannot determine", "can't determine",
+    "please clarify", "as an ai", "i'm unable to determine", "unclear from the",
+    "i don't know", "i do not know", "not certain"
+  ],
+
+  "refusal_phrases": [
+    "i cannot help with that", "i can't help with that", "i won't be able to",
+    "i'm not able to assist", "i am not able to assist", "i refuse",
+    "i cannot assist with", "i can't assist with", "unable to comply"
+  ],
+
+  "legitimate_reason_keywords": [
+    "policy", "permission", "access", "credential", "scope", "authoriz",
+    "compliance", "not connected", "missing scope", "reconnect"
+  ],
+
+  "acknowledgment_keywords": [
+    "error", "fail", "issue", "retry", "sorry", "apolog", "unable",
+    "couldn't", "could not", "problem", "blocked", "stuck"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "Edit these lists freely — they drive tool_surface_stakes and opening_task_keywords in feature_extraction.py. Keep them lowercase; matching is substring-based on lowercased tool names / message text.",
+
+  "stakes_tool_keywords": [
+    "publish", "delete", "remove", "pay", "payment",
+    "approve", "webhook", "submit", "upload"
+  ],
+  "_stakes_tool_keywords_note": "send/message/post/react/email/coworker_* messaging deliberately excluded — verified against the real export that 'send'+'message' alone drive 406/427 hits of a broader list, entirely from coworker_send_slack_message/send_message_to_thread, which is this bot's ROUTINE way of posting results, not a stakes signal here. Re-check this if you point the router at a different dataset.",
+
+  "task_keywords_low_stakes": [
+    "quick", "draft", "check", "poll", "monitor", "read-only", "readonly",
+    "summarize", "summary", "status"
+  ],
+
+  "task_keywords_high_stakes": [
+    "analyze", "decide", "approve", "critical", "urgent", "production",
+    "deploy", "invoice", "payment", "escalate", "audit"
+  ]
+}

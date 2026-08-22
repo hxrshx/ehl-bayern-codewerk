@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title><!-- FILL: team name --> — Viktor Challenge</title>
+<style>
+  :root{--violet:#6748FD;--navy:#150079;--peach:#FFBD9E;--ink:#0d0d1a;--paper:#fbfaff}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--ink);font-family:'Gellix','Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+  .slide{display:none;width:100vw;height:100vh;padding:7vh 8vw;background:var(--paper);color:var(--navy);flex-direction:column;justify-content:center}
+  .slide.active{display:flex}
+  .slide.dark{background:var(--navy);color:var(--paper)}
+  h1{font-size:5.2vw;line-height:1.05;letter-spacing:-.02em}
+  h2{font-size:3.4vw;margin-bottom:4vh;letter-spacing:-.01em}
+  p,li{font-size:1.7vw;line-height:1.5;max-width:62vw}
+  .kicker{color:var(--violet);text-transform:uppercase;letter-spacing:.18em;font-size:1vw;font-weight:700;margin-bottom:2.5vh}
+  .dark .kicker{color:var(--peach)}
+  .big{font-size:3vw;font-weight:700;color:var(--violet);margin:2vh 0}
+  .dark .big{color:var(--peach)}
+  .cols{display:flex;gap:4vw;margin-top:2vh}
+  .card{flex:1;border:2px solid var(--violet);border-radius:14px;padding:2.5vh 1.8vw}
+  .card h3{color:var(--violet);font-size:1.4vw;margin-bottom:1vh}
+  img.chart{max-height:58vh;max-width:80vw;border-radius:10px;box-shadow:0 8px 30px rgba(21,0,121,.15)}
+  .foot{position:fixed;bottom:2.5vh;right:8vw;font-size:.9vw;color:var(--violet);opacity:.7}
+  code{background:rgba(103,72,253,.1);padding:.1em .35em;border-radius:5px;font-size:.95em}
+</style>
+</head>
+<body>
+
+<section class="slide dark active">
+  <div class="kicker">Viktor Challenge · TUM.ai · Build the Router</div>
+  <h1><!-- FILL: team name --></h1>
+  <p class="big"><!-- FILL: one-line claim, e.g. "−41% cost at ≥95% kept outcome" --></p>
+  <p><!-- FILL: members --></p>
+</section>
+
+<section class="slide">
+  <div class="kicker">Objective</div>
+  <h2>The trade-off we chose</h2>
+  <p><!-- FILL: cost / latency / quality / own metric — and why, in one sentence --></p>
+</section>
+
+<section class="slide">
+  <div class="kicker">The signal</div>
+  <h2>What the router looks at</h2>
+  <div class="cols">
+    <div class="card"><h3>Structure in the traces</h3><p><!-- FILL: the nameable pattern --></p></div>
+    <div class="card"><h3>Shown on a real trace</h3><p><!-- FILL: concrete example (short snippet, no bulk data) --></p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The one chart</div>
+  <h2>Cost–quality frontier <span style="font-size:.5em">(held-out split, cache-aware)</span></h2>
+  <img class="chart" src="../results/frontier.png" alt="frontier"><!-- FILL: or inline base64 -->
+</section>
+
+<section class="slide">
+  <div class="kicker">Honesty</div>
+  <h2>The off-policy estimate — and where it breaks</h2>
+  <ul style="list-style:none">
+    <li><b style="color:var(--violet)">Method —</b> <!-- FILL: matching / weighting / judge model --></li>
+    <li style="margin-top:2vh"><b style="color:var(--violet)">Cache trap —</b> <!-- FILL: how switches were repriced --></li>
+    <li style="margin-top:2vh"><b style="color:var(--violet)">Weakest point —</b> <!-- FILL: the named failure mode --></li>
+  </ul>
+</section>
+
+<section class="slide dark">
+  <div class="kicker">Close</div>
+  <h1 style="font-size:3.6vw"><!-- FILL: one claim --></h1>
+  <p class="big"><!-- FILL: one number --></p>
+  <p><!-- FILL: one weakness + next step --></p>
+</section>
+
+<div class="foot">Viktor challenge · TUM.ai</div>
+<script>
+  const s=[...document.querySelectorAll('.slide')];let i=0;
+  const show=n=>{s[i].classList.remove('active');i=(n+s.length)%s.length;s[i].classList.add('active')};
+  addEventListener('keydown',e=>{
+    if(['ArrowRight',' ','PageDown'].includes(e.key))show(i+1);
+    if(['ArrowLeft','PageUp'].includes(e.key))show(i-1);
+    if(e.key==='f')document.documentElement.requestFullscreen();
+  });
+  addEventListener('click',()=>show(i+1));
+</script>
+</body>
+</html>
