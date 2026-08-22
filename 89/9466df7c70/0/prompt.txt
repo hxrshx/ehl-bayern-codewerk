@@ -1,0 +1,10 @@
+github.com/tum-ai/ehl go through this repo in detail adn tell me if there's anything we should do or should keep in mind on top of what already there is
+
+---
+
+Add DeepWiki MCP — claude mcp add -s user -t http deepwiki https://mcp.deepwiki.com/mcp. Free, no auth, works on any public GitHub repo.
+what should i do fro thsi,it was in the website
+
+---
+
+yes add that and push
