@@ -13,7 +13,11 @@
 
 **Beating the baseline** (challenge deck, step/05). Against the starter kit's own `baseline_router`, this router is **$39.37 cheaper and +0.37pp higher quality** — strictly better on both axes, not cheaper at the expense of quality. The baseline reroutes 289 of 1,000 tasks; this router reroutes 775.
 
-![frontier](evaluation/frontier.png)
+**The cost–quality frontier**, priced cache-aware, with 95% bootstrap confidence intervals:
+
+![cost–quality frontier](evaluation/frontier.png)
+
+The challenge asks for a router and an honest **off-policy evaluation** of it. `rule_based_router/` is the router; `evaluation/` is the off-policy estimate, including the six ways it can fail.
 
 | where | what |
 |---|---|
