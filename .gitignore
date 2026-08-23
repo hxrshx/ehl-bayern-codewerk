@@ -1,5 +1,6 @@
 # The dataset itself — challenge use only, no redistribution. Never commit.
 export/
+validation/data/
 *.tar.gz
 *.zip
 
