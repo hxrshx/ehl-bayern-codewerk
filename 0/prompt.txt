@@ -18,3 +18,40 @@ This is the problem statement, now let s do a critical analysis to see if we mee
 ache-aware costing, show naive vs. real (idea/04, "check before you celebrate")
 
 let s check the demo
+
+---
+
+So what does this mean?
+
+---
+
+continue
+
+---
+
+Okay now for the pitch
+
+Give me a simple, but detailed explanation on what all we did
+The, for each part of the hackathon.... like the evaluation parts, explain how we could say in the pitch(5 mins total), what was there, and what we did
+Now, for the evaluation part, what did we do
+
+---
+
+What were the rules for the rule based approach?
+
+---
+
+dont we have any other rules?
+
+---
+
+0-30 examples and confirm the heuristic's score matches your own read of the transcript? That step was explicitly called out earlier as the differentiator, and it's missing from what's written here. If it happened, say so explicitly with a number ("agreed with human judgment on 24/30 spot checks"); if it didn't, that's a real hole, not a stylistic one.
+
+---
+
+https://github.com/hxrshx/ehl-bayern-codewerk
+Check the current code and our code in this repo, what makes more sense to the problem?
+
+---
+
+okay do that, and let s take the meaningful code from both and commit the same
