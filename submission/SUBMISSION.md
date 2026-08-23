@@ -1,6 +1,6 @@
 # Bayern CodeWerk — Viktor Challenge submission
 
-**Members:** Harsha Sathish, Riya Biju, Pavin Sumathi Palanichamy, Prethebha Muthukumaran, Rohan Sanjay Patil
+**Members:** Riya Biju, Harsha Sathish, Pavin Sumathi Palanichamy, Prethebha Muthukumaran, Rohan Sanjay Patil
 
 ## Objective
 Minimise **input-side cost per task while holding outcome quality**. Cost is the only axis this
