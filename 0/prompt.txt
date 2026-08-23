@@ -1,0 +1,20 @@
+nice, so what is the next steps now?
+
+---
+
+DONT CHANGE THE CODE
+Do a critical analysis on the code we have and the problem statement of the hackathon, and say what we have done vs have to do
+
+---
+
+Build the real cost–quality frontier curve (swap our real quality_score_est into a plot_frontier.py-style adoption sweep), replacing the current three-point comparison.
+
+---
+
+This is the problem statement, now let s do a critical analysis to see if we meet all the things inside the problem
+
+---
+
+ache-aware costing, show naive vs. real (idea/04, "check before you celebrate")
+
+let s check the demo
