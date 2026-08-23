@@ -54,7 +54,7 @@
   <div class="kicker">The one chart</div>
   <h2>Cost–quality frontier <span style="font-size:.5em">(full public dataset · n=1000 · cache-aware)</span></h2>
   <img class="chart" src="frontier.png" alt="Cost against outcome quality with 95% bootstrap confidence intervals">
-  <p style="font-size:1.05vw;opacity:.85;margin-top:1vh">logged $155.23 → <b>ours $97.16 (62.6%)</b> at 99.30% quality, 95% CI [98.98, 99.60] · 775/1000 rerouted, all nine models still in play · always-dearest $326.65 (210%) for +0.6%</p>
+  <p style="font-size:1.05vw;opacity:.9;margin-top:1vh"><b style="color:var(--peach)">vs the starter baseline: $39 cheaper AND +0.4pp quality</b> — strictly better on both axes, not cheaper instead of better.<br>logged $155.23 · baseline $136.53 (88%) · <b>ours $97.16 (62.6%)</b> at 99.30%, 95% CI [98.98, 99.60] · 775/1000 rerouted, all nine models still in play · always-dearest $326.65 (210%) for +0.6%</p>
 </section>
 
 <section class="slide">
@@ -62,7 +62,7 @@
   <h2>The off-policy estimate — and where it breaks</h2>
   <ul style="list-style:none">
     <li><b style="color:var(--violet)">Method —</b> matched same-job comparison. Recurring crons that drifted across tiers are an accidental A/B test, so difficulty is held fixed by construction rather than by a similarity score. Quality is a constructed failure-counter signal over 10,422 tool calls; 95% bootstrap CIs, 400 resamples, seeded.</li>
-    <li style="margin-top:2vh"><b style="color:var(--violet)">Cache trap —</b> priced cache-aware throughout. Each row here is one complete task, so cached tokens are 0.16% — the trap is real but empty on this export. We also count what the kit forgets: tool tokens (+19.6%) and output (+50.1%). <b>True logged spend is $155, not $87.</b></li>
+    <li style="margin-top:2vh"><b style="color:var(--violet)">Cache trap —</b> priced cache-aware throughout; on this export each row is one complete task, so there is no shared prefix to lose. We also count what the kit omits — tool tokens and output — so <b>the true bill is $155, not $87</b>, and every percentage here is of that larger number.</li>
     <li style="margin-top:2vh"><b style="color:var(--violet)">Weakest point —</b> <b>our CI overlaps “route everything cheap”</b> ([98.98, 99.60] vs [98.21, 99.01]). We cannot claim to beat the loophole on measured quality. What separates us is that we keep all nine models in play and escalate on risk — a design argument, not a measured one. And a fluent, confident, <i>wrong</i> answer with no failed tool call scores perfectly. That bounds every quality claim here.</li>
   </ul>
 </section>
@@ -70,7 +70,7 @@
 <section class="slide dark">
   <div class="kicker">Close</div>
   <h1 style="font-size:3.6vw">Viktor has no per-task routing today. Adding it is close to free.</h1>
-  <p class="big">$155.23 → $97.16 · 62.6% of the bill at 99.3% of current quality · 775/1000 tasks rerouted</p>
+  <p class="big">$155.23 → $97.16 · 62.6% of the bill at 99.3% of current quality<br><span style="font-size:.62em;opacity:.85">beats the starter baseline on cost <i>and</i> quality · 775/1000 tasks rerouted</span></p>
   <p><b>Known weakness:</b> our estimator cannot separate us from routing everything cheap on quality alone — we say so before you ask. <b>Next:</b> judge-model rescoring on the segments where the two policies disagree, to turn a design argument into a measured one.</p>
 </section>
 
