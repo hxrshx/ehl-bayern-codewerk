@@ -13,3 +13,7 @@ evaluation/results/
 
 __pycache__/
 .DS_Store
+
+# Presentation speaking notes — working material, not a deliverable.
+submission/SCRIPT.md
+**/PITCH-SCRIPT.md
