@@ -7,7 +7,7 @@
   :root{--violet:#6748FD;--navy:#150079;--peach:#FFBD9E;--ink:#0d0d1a;--paper:#fbfaff}
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--ink);font-family:'Gellix','Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
-  .slide{display:none;width:100vw;height:100vh;padding:7vh 8vw;background:var(--paper);color:var(--navy);flex-direction:column;justify-content:center}
+  .slide{display:none;width:100vw;height:100vh;padding:7vh 8vw;background:var(--paper);color:var(--navy);flex-direction:column;justify-content:center;overflow-y:auto}
   .slide.active{display:flex}
   .slide.dark{background:var(--navy);color:var(--paper)}
   h1{font-size:5.2vw;line-height:1.05;letter-spacing:-.02em}
@@ -61,9 +61,9 @@
   <div class="kicker">Honesty</div>
   <h2>The off-policy estimate — and where it breaks</h2>
   <ul style="list-style:none">
-    <li><b style="color:var(--violet)">Method —</b> matched same-job comparison. Recurring crons that drifted across tiers are an accidental A/B test, so difficulty is held fixed by construction rather than by a similarity score. Quality is a constructed failure-counter signal over 10,422 tool calls; 95% bootstrap CIs, 400 resamples, seeded.</li>
+    <li><b style="color:var(--violet)">Method —</b> matched same-job comparison. Recurring crons drifted across price tiers on their own, so difficulty is held fixed <i>by construction</i>, not by a similarity score. Quality is a failure-counter signal over 10,422 tool calls; 95% bootstrap CIs, 400 resamples, seeded.</li>
     <li style="margin-top:2vh"><b style="color:var(--violet)">Cache trap —</b> priced cache-aware throughout; on this export each row is one complete task, so there is no shared prefix to lose. We also count what the kit omits — tool tokens and output — so <b>the true bill is $155, not $87</b>, and every percentage here is of that larger number.</li>
-    <li style="margin-top:2vh"><b style="color:var(--violet)">Weakest point —</b> <b>our CI overlaps “route everything cheap”</b> ([98.98, 99.60] vs [98.21, 99.01]). We cannot claim to beat the loophole on measured quality. What separates us is that we keep all nine models in play and escalate on risk — a design argument, not a measured one. And a fluent, confident, <i>wrong</i> answer with no failed tool call scores perfectly. That bounds every quality claim here.</li>
+    <li style="margin-top:2vh"><b style="color:var(--violet)">Weakest point —</b> <b>a fluent, confident, <i>wrong</i> answer with no failed tool call scores perfectly.</b> That bounds every quality claim here. And our CI overlaps “route everything cheap” ([98.98, 99.60] vs [98.21, 99.01]) — we cannot claim to beat the loophole on <i>measured</i> quality. What separates us is keeping all nine models in play and escalating on risk: a design argument, not a measured one.</li>
   </ul>
 </section>
 
