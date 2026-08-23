@@ -20,6 +20,21 @@ own estimator ranks *route everything cheap* above both — we believe that is s
 the cheap tier's observed quality, but we cannot prove it here, so **we claim a cost reduction,
 not a quality win.**
 
+## Two findings behind those numbers
+
+**We checked the rules against the data, not our intuition.** The first version of the
+router's risky-tool list included *send* and *message*. It fired on **411 of 1,000 tasks** —
+almost all of it the agent routinely posting results to Slack, which is not a risk signal.
+Narrowing it to genuinely irreversible actions dropped that to **56**, and that single fix is
+what took the router from *worse* than the starter baseline to better than it.
+
+**The starter kit's own cost figure is slightly wrong, and we can show why.** Rebuilding it
+gives $87.52 against its printed $87.42. The gap is a cache discount credited on **35,344
+tokens that were never actually shared** between calls, caused by its 2,000-character
+grouping hash. Leaving that discount in reproduces their figure exactly; removing it gives
+ours. Separately, the kit prices input only — adding tool-definition tokens (**+19.6%**) and
+output (**+50.1%**) is what takes the real corpus cost from $87.42 to **$155.23**.
+
 **The cost–quality frontier**, priced cache-aware, with 95% bootstrap confidence intervals:
 
 ![cost–quality frontier](evaluation/frontier.png)
