@@ -1,0 +1,5 @@
+# Derived from the challenge dataset. Licence: challenge use only, no
+# redistribution - so nothing regenerable from the export is committed.
+results/*.jsonl
+results/episodes.jsonl
+results/payloads.jsonl
