@@ -1,0 +1,101 @@
+nice, so what is the next steps now?
+
+---
+
+DONT CHANGE THE CODE
+Do a critical analysis on the code we have and the problem statement of the hackathon, and say what we have done vs have to do
+
+---
+
+Build the real cost–quality frontier curve (swap our real quality_score_est into a plot_frontier.py-style adoption sweep), replacing the current three-point comparison.
+
+---
+
+This is the problem statement, now let s do a critical analysis to see if we meet all the things inside the problem
+
+---
+
+ache-aware costing, show naive vs. real (idea/04, "check before you celebrate")
+
+let s check the demo
+
+---
+
+So what does this mean?
+
+---
+
+continue
+
+---
+
+Okay now for the pitch
+
+Give me a simple, but detailed explanation on what all we did
+The, for each part of the hackathon.... like the evaluation parts, explain how we could say in the pitch(5 mins total), what was there, and what we did
+Now, for the evaluation part, what did we do
+
+---
+
+What were the rules for the rule based approach?
+
+---
+
+dont we have any other rules?
+
+---
+
+0-30 examples and confirm the heuristic's score matches your own read of the transcript? That step was explicitly called out earlier as the differentiator, and it's missing from what's written here. If it happened, say so explicitly with a number ("agreed with human judgment on 24/30 spot checks"); if it didn't, that's a real hole, not a stylistic one.
+
+---
+
+https://github.com/hxrshx/ehl-bayern-codewerk
+Check the current code and our code in this repo, what makes more sense to the problem?
+
+---
+
+okay do that, and let s take the meaningful code from both and commit the same
+
+---
+
+We need to add a validation code as well, so I think the team will give a jsonl file similarly as the input, for maybe like the test set,
+So let s take this as the input and then annotate the file
+
+Also, let s have a simple UI where we can give a prompt as input, and output the model it should select
+
+---
+
+curl -L -o trajectories_v1_02.jsonl.tar.gz https://ref.viktor.com/tumai-data-02
+
+This is the validation data, let s test it
+
+---
+
+push the code to github
+
+---
+
+<task-notification>
+<task-type>artifact-auto-react</task-type>
+<summary>1 artifact auto-reply subscription paused by the interrupt (comments sent to Claude meanwhile are answered then)</summary>
+The user's interrupt paused it and the watch is kept; when the user asks you to publish this artifact again, that publish resumes it, or resume_replies if the user asks, as does the user's next typed message — each only on hosts that pass typed input through as the user's, and comments sent to Claude in the meantime are answered then; publishing without being asked, while handling a notification or a wake-up, leaves it paused. Do not republish or resume just to re-enable auto-replies unless the user asks.
+</task-notification>
+
+---
+
+so do we generate a graph for this validation? and push that to github?
+
+---
+
+I am creating a slide deck in Claude Webpage, and want a prompt I could give there.... just give me the prompt
+
+---
+
+We have a demo right? real world giving of prompt and selecting the model right?
+
+---
+
+need to make the UI more nicer
+And also, based on the prompt, it should choose the checkboxes right? the user need not enter these? or is this required?
+
+If the UI can be same as Viktor's
