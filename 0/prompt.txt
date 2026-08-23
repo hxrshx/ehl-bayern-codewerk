@@ -80,3 +80,7 @@ push the code to github
 <summary>1 artifact auto-reply subscription paused by the interrupt (comments sent to Claude meanwhile are answered then)</summary>
 The user's interrupt paused it and the watch is kept; when the user asks you to publish this artifact again, that publish resumes it, or resume_replies if the user asks, as does the user's next typed message — each only on hosts that pass typed input through as the user's, and comments sent to Claude in the meantime are answered then; publishing without being asked, while handling a notification or a wake-up, leaves it paused. Do not republish or resume just to re-enable auto-replies unless the user asks.
 </task-notification>
+
+---
+
+so do we generate a graph for this validation? and push that to github?
