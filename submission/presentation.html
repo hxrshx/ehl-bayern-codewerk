@@ -22,6 +22,24 @@
   .card h3{color:var(--violet);font-size:1.4vw;margin-bottom:1vh}
   img.chart{max-height:58vh;max-width:80vw;border-radius:10px;box-shadow:0 8px 30px rgba(21,0,121,.15)}
   .foot{position:fixed;bottom:2.5vh;right:8vw;font-size:.9vw;color:var(--violet);opacity:.7}
+
+  /* --- print / PDF export -------------------------------------------------
+     On screen only .active is shown, so a naive Cmd-P emits a single page.
+     For print every slide is shown, forced onto its own landscape page, and
+     colours are preserved (the deck is dark navy; without this it prints white). */
+  @page{size:1600px 900px;margin:0}
+  @media print{
+    html,body{width:1600px;background:#fff}
+    .slide{display:flex!important;width:1600px;height:900px;padding:70px 128px;
+           overflow:hidden;break-after:page;page-break-after:always;
+           -webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .slide:last-of-type{break-after:auto;page-break-after:auto}
+    .foot{position:absolute}
+    h1{font-size:83px}h2{font-size:54px}p,li{font-size:27px;max-width:1000px}
+    .kicker{font-size:16px}.big{font-size:48px}
+    .card h3{font-size:22px}img.chart{max-height:520px;max-width:1280px}
+    *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  }
   code{background:rgba(103,72,253,.1);padding:.1em .35em;border-radius:5px;font-size:.95em}
 </style>
 </head>
