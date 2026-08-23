@@ -14,9 +14,12 @@ decides, this measures.
 | policy | cost | % of today | quality | 95% CI | rerouted |
 |---|---|---|---|---|---|
 | logged policy (today) | $155.23 | 100.0% | 100.0% | [99.48, 100.49] | — |
+| starter kit `baseline_router` | $136.53 | 88.0% | 98.93% | [98.45, 99.41] | 289/1000 |
 | **`rule_based_router`** | **$97.16** | **62.6%** | **99.3%** | **[98.98, 99.6]** | **775/1000** |
 | *route everything cheap (no evidence)* | *$55.4* | *35.7%* | *98.67%* | *[98.21, 99.01]* | *699/1000* |
-| *always the dearest model* | *$326.65* | *210.4%* | *100.57%* | *[100.26, 100.87]* | — |
+| *always the dearest model* | *$326.65* | *210.4%* | *100.57%* | *[100.26, 100.87]* | *—* |
+
+**Beating the baseline** (challenge deck, step/05). Against the starter kit's own `baseline_router`, this router is **$39.37 cheaper and +0.37pp higher quality** — strictly better on both axes, not cheaper at the expense of quality. The baseline reroutes 289 of 1,000 tasks; this router reroutes 775.
 
 ![frontier](frontier.png)
 

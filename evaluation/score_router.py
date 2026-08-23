@@ -124,6 +124,16 @@ def main():
                 "quality_ci": [round(ql / LQ * 100, 2), round(qh / LQ * 100, 2)],
                 "rerouted": mv, "coverage_pct": round(mv / len(per) * 100, 1), "note": note}
 
+    # the starter kit's own baseline_router, reimplemented from its source so the
+    # "beat the baseline" comparison (challenge deck, step/05) is measured, not assumed:
+    # whole trajectories under 15k est. tokens go to the vendor's cheap sibling.
+    BASE_CHEAP = {"claude": "claude-sonnet-5", "gpt": "gpt-5.6-luna"}
+    base_routes = []
+    for e in eps.values():
+        tot = e["tok_chars4"]["total"]
+        m = BASE_CHEAP[e["vendor"]] if tot < 15_000 else e["model"]
+        base_routes.append({"row_id": e["row_id"], "logged": e["model"], "proposed": m})
+
     cheap = {v: min({e["model"] for e in eps.values() if e["vendor"] == v},
                     key=lambda m: price_of(m, pr)[0])
              for v in {e["vendor"] for e in eps.values()}}
@@ -132,6 +142,7 @@ def main():
 
     out = [
         mark("logged policy (what Viktor runs today)", const(lambda e: e["model"]), "the baseline"),
+        mark("starter baseline_router", base_routes, "the kit's heuristic — the bar to beat"),
         mark("rule_based_router", routes, "this repo's router, unmodified"),
         mark("route everything cheap", const(lambda e: cheap[e["vendor"]]),
              "no evidence - the loophole, priced"),
