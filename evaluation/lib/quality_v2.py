@@ -68,6 +68,7 @@ def main():
     ap.add_argument("episodes", nargs="?", default="results/episodes.jsonl")
     ap.add_argument("--export", default="export")
     ap.add_argument("--out", default="results/quality_v2.jsonl")
+    ap.add_argument("--v1", help="v1 scores; defaults to quality.jsonl beside --out")
     a = ap.parse_args()
     eps = [json.loads(l) for l in open(a.episodes)]
     by_id = {e["row_id"]: e for e in eps}
@@ -94,7 +95,11 @@ def main():
         m = med.get(e["family_id"], 1) or 1
         e["_loop_ratio"] = e["behavior"]["n_calls"] / m
 
-    v1 = {d["row_id"]: d["q_score"] for d in map(json.loads, open("results/quality.jsonl"))}
+    # v1 scores sit beside the v2 output, not at a fixed path — a hard-coded
+    # results/quality.jsonl breaks the moment you run on a second split.
+    v1p = Path(a.v1) if getattr(a, "v1", None) else Path(a.out).parent / "quality.jsonl"
+    v1 = ({d["row_id"]: d["q_score"] for d in map(json.loads, open(v1p))}
+          if v1p.exists() else {})
     rows, moved = [], []
     with open(a.out, "w") as f:
         for e in eps:

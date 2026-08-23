@@ -9,33 +9,35 @@ This folder is that missing half. The router is run **unmodified**; nothing in
 `rule_based_router/` or `baseline/` is edited or imported over. The router
 decides, this measures.
 
-## Result
+## Headline result — validated on a held-out chunk
 
-| policy | cost | % of today | quality | 95% CI | rerouted |
-|---|---|---|---|---|---|
-| logged policy (today) | $155.23 | 100.0% | 100.0% | [99.48, 100.49] | — |
-| starter kit `baseline_router` | $136.53 | 88.0% | 98.93% | [98.45, 99.41] | 289/1000 |
-| **`rule_based_router`** | **$97.16** | **62.6%** | **99.3%** | **[98.98, 99.6]** | **775/1000** |
-| *route everything cheap (no evidence)* | *$55.4* | *35.7%* | *98.67%* | *[98.21, 99.01]* | *699/1000* |
-| *always the dearest model* | *$326.65* | *210.4%* | *100.57%* | *[100.26, 100.87]* | *—* |
+Chunk 02 was released on the final morning. The policy was **fitted on chunk 01 and applied
+cold**; nothing was re-tuned. Costs are cache-aware and include tool-definition and output
+tokens. 95% bootstrap CIs, 400 resamples, seeded.
 
-**Beating the baseline** (challenge deck, step/05). Against the starter kit's own `baseline_router`, this router is **$39.37 cheaper and +0.37pp higher quality** — strictly better on both axes, not cheaper at the expense of quality. The baseline reroutes 289 of 1,000 tasks; this router reroutes 775.
+| policy | build $ | build % | build q | **held-out $** | **held-out %** | **held-out q** | held-out 95% CI |
+|---|---|---|---|---|---|---|---|
+| logged (today) | $155.23 | 100.0% | 100.0% | $139.32 | 100.0% | 100.0% | [99.48, 100.51] |
+| starter `baseline_router` | $136.53 | 88.0% | 98.93% | $121.35 | 87.1% | 99.36% | [98.88, 99.85] |
+| **`rule_based_router`** | $97.16 | 62.6% | 99.3% | $90.29 | 64.8% | 98.83% | [98.41, 99.23] |
+| *route everything cheap* | *$55.4* | *35.7%* | *98.67%* | *$49.49* | *35.5%* | *99.65%* | *[99.35, 99.96]* |
+| *always the dearest* | *$326.65* | *210.4%* | *100.57%* | *$295.57* | *212.2%* | *100.73%* | *[100.47, 100.93]* |
 
-![frontier](frontier.png)
+**What generalised: the cost cut.** 62.6% → 64.8% of the logged bill on data the router had
+never seen, rerouting 744 of 1,000 tasks and still using all nine models. That is the claim
+we stand behind.
 
-**The headline: 37% of the bill removed at 99.3% of today's outcome quality**,
-rerouting 775 of 1,000 tasks.
+**What did not: the quality win.** On the build chunk our router scored +0.36pp above the
+starter baseline, but the interval [-0.20, +0.93] spans zero, so that was never a real
+difference. On held-out data it is **-0.53pp, CI [-0.90, -0.13]** — excludes zero, so the baseline
+is genuinely better on quality by about half a point while costing 22 points more of the bill.
 
-Two things make that credible rather than merely large:
-
-**It still uses the whole ladder.** After routing, work is spread across all nine
-models — 488 to `sonnet-5`, but also 38 to `opus-4-8`, 5 to `sol`, 4 to `fable-5`,
-3 to `opus-5`. The router *escalates* where its risk rules fire. A policy that
-simply dumped everything cheap would show two models and cost $55.4.
-
-**Paying for the best model everywhere costs $326.65 — 210.4% of today's bill —
-for +0.6% quality.** That is the row that answers "why not just use the
-strongest model".
+**And the awkward one we are not hiding:** on held-out data our own estimator scores
+*route everything cheap* at 99.65% — above both us and the baseline. We do not believe that
+is true. It is selection bias: the cheap models' observed quality reflects the jobs the
+operator was willing to give them. But we cannot prove that with this data, so we do not
+claim a quality win at all. **The claim is a large, reproducible cost reduction with an
+estimator whose failure modes we can name.**
 
 ## What the cost number includes that the starter kit's does not
 

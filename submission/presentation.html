@@ -48,7 +48,7 @@
 <section class="slide dark active">
   <div class="kicker">Viktor Challenge · TUM.ai · Build the Router</div>
   <h1>Bayern CodeWerk</h1>
-  <p class="big">−37% of the bill at 99.3% of current outcome quality — with error bars, and we show you where it breaks</p>
+  <p class="big">−35% of the bill on a held-out chunk we had never seen — and an honest account of what our own numbers will not support</p>
   <p>Riya Biju · Harsha Sathish · Pavin Sumathi Palanichamy · Prethebha Muthukumaran · Rohan Sanjay Patil</p>
   <p style="opacity:.62;font-size:.8em">Viktor × TUM.ai Model Router Challenge · Munich, 23 Aug 2026</p>
 </section>
@@ -72,7 +72,7 @@
   <div class="kicker">The one chart</div>
   <h2>Cost–quality frontier <span style="font-size:.5em">(full public dataset · n=1000 · cache-aware)</span></h2>
   <img class="chart" src="frontier.png" alt="Cost against outcome quality with 95% bootstrap confidence intervals">
-  <p style="font-size:1.05vw;opacity:.9;margin-top:1vh"><b style="color:var(--peach)">vs the starter baseline: $39 cheaper AND +0.4pp quality</b> — strictly better on both axes, not cheaper instead of better.<br>logged $155.23 · baseline $136.53 (88%) · <b>ours $97.16 (62.6%)</b> at 99.30%, 95% CI [98.98, 99.60] · 775/1000 rerouted, all nine models still in play · always-dearest $326.65 (210%) for +0.6%</p>
+  <p style="font-size:1.02vw;opacity:.92;margin-top:1vh"><b style="color:var(--peach)">Held out:</b> chunk 02 arrived this morning. Policy fitted on chunk 01, applied cold.<br><b>build split</b> $155.23 → <b>$97.16 (62.6%)</b> at 99.30% · <b>held-out</b> $139.32 → <b>$90.29 (64.8%)</b> at 98.83%, 95% CI [98.41, 99.23] · 744/1000 rerouted, still all nine models.<br>Baseline 88% / 87%. Always-dearest 210% for +0.6% quality.</p>
 </section>
 
 <section class="slide">
@@ -81,15 +81,15 @@
   <ul style="list-style:none">
     <li><b style="color:var(--violet)">Method —</b> matched same-job comparison. Recurring crons drifted across price tiers on their own, so difficulty is held fixed <i>by construction</i>, not by a similarity score. Quality is a failure-counter signal over 10,422 tool calls; 95% bootstrap CIs, 400 resamples, seeded.</li>
     <li style="margin-top:2vh"><b style="color:var(--violet)">Cache trap —</b> priced cache-aware throughout; on this export each row is one complete task, so there is no shared prefix to lose. We also count what the kit omits — tool tokens and output — so <b>the true bill is $155, not $87</b>, and every percentage here is of that larger number.</li>
-    <li style="margin-top:2vh"><b style="color:var(--violet)">Weakest point —</b> <b>a fluent, confident, <i>wrong</i> answer with no failed tool call scores perfectly.</b> That bounds every quality claim here. And our CI overlaps “route everything cheap” ([98.98, 99.60] vs [98.21, 99.01]) — we cannot claim to beat the loophole on <i>measured</i> quality. What separates us is keeping all nine models in play and escalating on risk: a design argument, not a measured one.</li>
+    <li style="margin-top:2vh"><b style="color:var(--violet)">Weakest point —</b> <b>our cost claim generalised; our quality claim did not.</b> On the held-out chunk the starter baseline scores <b>0.53pp better</b> than us, CI [−0.90, −0.13] — it excludes zero, so that is real. And a fluent, confident, <i>wrong</i> answer with no failed tool call scores perfectly with us, which is why "route everything cheap" scores <i>above</i> us on held-out data: our signal rewards the models the operator only trusted with easy work. <b>We are not claiming a quality win. We are claiming a large, reproducible cost cut and an estimator we can bound.</b></li>
   </ul>
 </section>
 
 <section class="slide dark">
   <div class="kicker">Close</div>
   <h1 style="font-size:3.6vw">Viktor has no per-task routing today. Adding it is close to free.</h1>
-  <p class="big">$155.23 → $97.16 · 62.6% of the bill at 99.3% of current quality<br><span style="font-size:.62em;opacity:.85">beats the starter baseline on cost <i>and</i> quality · 775/1000 tasks rerouted</span></p>
-  <p><b>Known weakness:</b> our estimator cannot separate us from routing everything cheap on quality alone — we say so before you ask. <b>Next:</b> judge-model rescoring on the segments where the two policies disagree, to turn a design argument into a measured one.</p>
+  <p class="big">Held-out: $139.32 → $90.29 · 64.8% of the bill at 98.8% of current quality<br><span style="font-size:.62em;opacity:.85">−35% on data we had never seen · 744/1000 rerouted · all nine models in play</span></p>
+  <p><b>Known weakness:</b> on held-out data our quality estimate favours the baseline over us by half a point, and favours routing everything cheap over both. We think that is selection bias in the estimator, not truth — but we cannot prove it with this data, so we are not claiming otherwise. <b>Next:</b> judge-model rescoring on the tasks where the policies disagree.</p>
 </section>
 
 <div class="foot">Viktor challenge · TUM.ai</div>
