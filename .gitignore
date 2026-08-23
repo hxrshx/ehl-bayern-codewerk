@@ -1,6 +1,15 @@
+# The dataset itself — challenge use only, no redistribution. Never commit.
 export/
-results/
-submission/
-*.zip
-__pycache__/
 *.tar.gz
+*.zip
+
+# Anything regenerable that carries dataset content (per-task rows, prompts,
+# recovered responses). Charts and aggregate summaries ARE committed, so the
+# jury can see the evidence without the data.
+**/results/*.jsonl
+**/results/*.csv
+**/results/payloads*
+evaluation/results/
+
+__pycache__/
+.DS_Store

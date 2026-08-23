@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bayern CodeWerk — Viktor Challenge</title>
+<style>
+  :root{--violet:#6748FD;--navy:#150079;--peach:#FFBD9E;--ink:#0d0d1a;--paper:#fbfaff}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--ink);font-family:'Gellix','Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+  .slide{display:none;width:100vw;height:100vh;padding:7vh 8vw;background:var(--paper);color:var(--navy);flex-direction:column;justify-content:center}
+  .slide.active{display:flex}
+  .slide.dark{background:var(--navy);color:var(--paper)}
+  h1{font-size:5.2vw;line-height:1.05;letter-spacing:-.02em}
+  h2{font-size:3.4vw;margin-bottom:4vh;letter-spacing:-.01em}
+  p,li{font-size:1.7vw;line-height:1.5;max-width:62vw}
+  .kicker{color:var(--violet);text-transform:uppercase;letter-spacing:.18em;font-size:1vw;font-weight:700;margin-bottom:2.5vh}
+  .dark .kicker{color:var(--peach)}
+  .big{font-size:3vw;font-weight:700;color:var(--violet);margin:2vh 0}
+  .dark .big{color:var(--peach)}
+  .cols{display:flex;gap:4vw;margin-top:2vh}
+  .card{flex:1;border:2px solid var(--violet);border-radius:14px;padding:2.5vh 1.8vw}
+  .card h3{color:var(--violet);font-size:1.4vw;margin-bottom:1vh}
+  img.chart{max-height:58vh;max-width:80vw;border-radius:10px;box-shadow:0 8px 30px rgba(21,0,121,.15)}
+  .foot{position:fixed;bottom:2.5vh;right:8vw;font-size:.9vw;color:var(--violet);opacity:.7}
+  code{background:rgba(103,72,253,.1);padding:.1em .35em;border-radius:5px;font-size:.95em}
+</style>
+</head>
+<body>
+
+<section class="slide dark active">
+  <div class="kicker">Viktor Challenge · TUM.ai · Build the Router</div>
+  <h1>Bayern CodeWerk</h1>
+  <p class="big">−37% of the bill at 99.3% of current outcome quality — with error bars, and we show you where it breaks</p>
+  <p>Viktor × TUM.ai Model Router Challenge · Munich, 23 Aug 2026<br><span style="opacity:.6;font-size:.8em">TEAM MEMBERS — fill before export</span></p>
+</section>
+
+<section class="slide">
+  <div class="kicker">Objective</div>
+  <h2>The trade-off we chose</h2>
+  <p><b>Input cost per task, holding outcome quality.</b> It is the only axis this export supports honestly: no timings ship, so latency is unmeasurable, and no quality labels ship, so quality has to be constructed — we treat it as a <i>constraint</i>, not a target.</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">The signal</div>
+  <h2>What the router looks at</h2>
+  <div class="cols">
+    <div class="card"><h3>Structure in the traces</h3><p><b>Risk signals, not prompt wording.</b> The router reads the tool signature, whether a stakes tool was called, whether the last result was an error, and whether it is stuck in a retry loop. It starts on a price ladder and moves up or down by named steps. <b>Every decision reports which rules fired.</b></p></div>
+    <div class="card"><h3>Shown on a real trace</h3><p>Viktor does not route per task today — a human picks one model per workspace. So recurring cron jobs drifted across price tiers on their own: <b>90 job families, 69 of them on two or more tiers.</b> Same job, different model. That accident is what lets us measure a model that never ran.</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="kicker">The one chart</div>
+  <h2>Cost–quality frontier <span style="font-size:.5em">(full public dataset · n=1000 · cache-aware)</span></h2>
+  <img class="chart" src="frontier.png" alt="Cost against outcome quality with 95% bootstrap confidence intervals">
+  <p style="font-size:1.05vw;opacity:.85;margin-top:1vh">logged $155.23 → <b>ours $97.16 (62.6%)</b> at 99.30% quality, 95% CI [98.98, 99.60] · 775/1000 rerouted, all nine models still in play · always-dearest $326.65 (210%) for +0.6%</p>
+</section>
+
+<section class="slide">
+  <div class="kicker">Honesty</div>
+  <h2>The off-policy estimate — and where it breaks</h2>
+  <ul style="list-style:none">
+    <li><b style="color:var(--violet)">Method —</b> matched same-job comparison. Recurring crons that drifted across tiers are an accidental A/B test, so difficulty is held fixed by construction rather than by a similarity score. Quality is a constructed failure-counter signal over 10,422 tool calls; 95% bootstrap CIs, 400 resamples, seeded.</li>
+    <li style="margin-top:2vh"><b style="color:var(--violet)">Cache trap —</b> priced cache-aware throughout. Each row here is one complete task, so cached tokens are 0.16% — the trap is real but empty on this export. We also count what the kit forgets: tool tokens (+19.6%) and output (+50.1%). <b>True logged spend is $155, not $87.</b></li>
+    <li style="margin-top:2vh"><b style="color:var(--violet)">Weakest point —</b> <b>our CI overlaps “route everything cheap”</b> ([98.98, 99.60] vs [98.21, 99.01]). We cannot claim to beat the loophole on measured quality. What separates us is that we keep all nine models in play and escalate on risk — a design argument, not a measured one. And a fluent, confident, <i>wrong</i> answer with no failed tool call scores perfectly. That bounds every quality claim here.</li>
+  </ul>
+</section>
+
+<section class="slide dark">
+  <div class="kicker">Close</div>
+  <h1 style="font-size:3.6vw">Viktor has no per-task routing today. Adding it is close to free.</h1>
+  <p class="big">$155.23 → $97.16 · 62.6% of the bill at 99.3% of current quality · 775/1000 tasks rerouted</p>
+  <p><b>Known weakness:</b> our estimator cannot separate us from routing everything cheap on quality alone — we say so before you ask. <b>Next:</b> judge-model rescoring on the segments where the two policies disagree, to turn a design argument into a measured one.</p>
+</section>
+
+<div class="foot">Viktor challenge · TUM.ai</div>
+<script>
+  const s=[...document.querySelectorAll('.slide')];let i=0;
+  const show=n=>{s[i].classList.remove('active');i=(n+s.length)%s.length;s[i].classList.add('active')};
+  addEventListener('keydown',e=>{
+    if(['ArrowRight',' ','PageDown'].includes(e.key))show(i+1);
+    if(['ArrowLeft','PageUp'].includes(e.key))show(i-1);
+    if(e.key==='f')document.documentElement.requestFullscreen();
+  });
+  addEventListener('click',()=>show(i+1));
+</script>
+</body>
+</html>
